@@ -6,6 +6,7 @@
     .category_container {
         margin-left: 10%;
         margin-top: 15%;
+        width: 339px;
 
         .category {
             font-size: 18px;
@@ -16,16 +17,47 @@
         }
 
         .active {
-            font-size: 68px;
+            font-size: 54px;
             line-height: 102px;
             font-weight: 600;
             color: #ffffff;
         }
     }
 
+    .carousel-root {
+        width: 524px;
+        height: 524px;
+
+        .carousel-slider {
+            overflow: visible;
+        }
+
+        .carousel img.previous {
+            max-width: 68px;
+            max-height: 68px;
+            position: absolute;
+            top: 228px;
+            left: -32px;
+            z-index: 1;
+            cursor: pointer;
+            pointer-events: all;
+        }
+
+        .carousel img.next {
+            max-width: 68px;
+            max-height: 68px;
+            position: absolute;
+            top: 228px;
+            left: 492px;
+            z-index: 1;
+            cursor: pointer;
+            pointer-events: all;
+        }
+    }
+
     .circular_container {
         position: relative;
-        width: 524px;
+        width: 100%;
         height: 524px;
         border-radius: 50%;
         display: flex;
@@ -40,32 +72,6 @@
             line-height: 32px;
             font-weight: 400;
             color: #ffffff;
-
-            .carousel-slider {
-                overflow: visible;
-            }
-
-            .carousel img.previous {
-                max-width: 68px;
-                max-height: 68px;
-                position: absolute;
-                top: 122px;
-                left: -88px;
-                z-index: 1;
-                cursor: pointer;
-                pointer-events: all;
-            }
-
-            .carousel img.next {
-                max-width: 68px;
-                max-height: 68px;
-                position: absolute;
-                top: 122px;
-                right: -94px;
-                z-index: 1;
-                cursor: pointer;
-                pointer-events: all;
-            }
         }
 
         .rotating_container {
@@ -92,7 +98,6 @@
             }
 
         }
-
     }
 
 }
