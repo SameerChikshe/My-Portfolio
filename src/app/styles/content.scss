@@ -7,21 +7,30 @@
         margin-left: 10%;
         margin-top: 15%;
         width: 339px;
+        box-sizing: border-box;
 
         .category {
             font-size: 18px;
             font-weight: 400;
             line-height: 27px;
             color: #A5A5A5;
-            cursor: pointer;
+            cursor: default;
         }
 
-        .active {
+        .heading {
             font-size: 54px;
             line-height: 102px;
             font-weight: 600;
             color: #ffffff;
         }
+
+        .active {
+            color: #92FF06;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 54px;
+        }
+
     }
 
     .carousel-root {
@@ -62,16 +71,75 @@
         border-radius: 50%;
         display: flex;
         justify-content: center;
+        gap: 50px;
         align-items: center;
         border: 1px solid #505050;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        .text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            max-width: 418px;
+        }
+
 
         .info {
-            position: absolute;
-            padding: 60px;
             font-size: 16px;
-            line-height: 32px;
             font-weight: 400;
             color: #ffffff;
+            display: flex;
+            gap: 10px;
+            max-width: 300px;
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+
+            .company {
+                display: flex;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .name {
+                    color: dimgrey;
+                    font-weight: 600;
+                }
+
+                .span {
+                    color: darkgrey;
+                }
+
+                .dot {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1px;
+                }
+
+
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+
+
+
         }
 
         .rotating_container {

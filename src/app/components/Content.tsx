@@ -5,43 +5,12 @@ import NextArrow from "../../images/NextArrow.svg";
 import PreviousArrow from "../../images/PreviousArrow.svg";
 import "../styles/content.scss";
 import { useState } from "react";
+import { AboutData, OrganisationDetails, data } from "../data/about";
 
 const Content = () => {
-  const [activeTab, setActiveTab] = useState("About");
-  const data: any = [
-    {
-      section: "About",
-      content:
-        "Experienced UI/UX Designer passionate about creating intuitive and visually compelling digital experiences. Proficient in translating complex ideas into user-friendly interfaces, I specialize in crafting designs that seamlessly blend aesthetics with functionality. My skill set includes design thinking, wireframing, visual design, prototyping, and a strong proficiency in design tools",
-    },
-    {
-      section: "Introduction",
-      content:
-        "Experienced UI/UX Designer passionate about creating intuitive and visually compelling digital experiences. Proficient in translating complex ideas into user-friendly interfaces, I specialize in crafting designs that seamlessly blend aesthetics with functionality. My skill set includes design thinking, wireframing, visual design, prototyping, and a strong proficiency in design tools",
-    },
-    {
-      section: "Education",
-      content:
-        "Experienced UI/UX Designer passionate about creating intuitive and visually compelling digital experiences. Proficient in translating complex ideas into user-friendly interfaces, I specialize in crafting designs that seamlessly blend aesthetics with functionality. My skill set includes design thinking, wireframing, visual design, prototyping, and a strong proficiency in design tools",
-      logo: [
-        "../../public/BVM.jpeg",
-        "../../public/ssc.jpg",
-        "../../public/sggs.jpg",
-      ],
-    },
-    {
-      section: "Skills",
-      content:
-        "Experienced UI/UX Designer passionate about creating intuitive and visually compelling digital experiences. Proficient in translating complex ideas into user-friendly interfaces, I specialize in crafting designs that seamlessly blend aesthetics with functionality. My skill set includes design thinking, wireframing, visual design, prototyping, and a strong proficiency in design tools",
-    },
-    {
-      section: "Experience",
-      content:
-        "Experienced UI/UX Designer passionate about creating intuitive and visually compelling digital experiences. Proficient in translating complex ideas into user-friendly interfaces, I specialize in crafting designs that seamlessly blend aesthetics with functionality. My skill set includes design thinking, wireframing, visual design, prototyping, and a strong proficiency in design tools",
-    },
-  ];
+  const [activeTab, setActiveTab] = useState("Introduction");
 
-  const handleCarouselChange = (index) => {
+  const handleCarouselChange = (index: number) => {
     setActiveTab(data[index].section);
   };
 
@@ -49,25 +18,20 @@ const Content = () => {
     <>
       <div className="page_container">
         <div className="category_container">
+          <div className="category heading">About.</div>
           {data &&
             data.length > 0 &&
-            data.map(
-              (
-                item: { [x: string]: { content: any } },
-                index: string | number
-              ) => {
-                return (
-                  <div
-                    key={index}
-                    className={`category ${
-                      activeTab === item.section ? "active" : ""
-                    }`}
-                  >
-                    {item.section}
-                  </div>
-                );
-              }
-            )}
+            data.map((item: AboutData, index: number) => {
+              return (
+                <div
+                  key={index}
+                  className={`category
+                     ${activeTab === item.section ? "active" : ""}`}
+                >
+                  {item.section}
+                </div>
+              );
+            })}
         </div>
 
         <Carousel
@@ -94,23 +58,37 @@ const Content = () => {
           showIndicators={false}
           showStatus={false}
           autoPlay={false}
+          interval={25000}
           onChange={(index) => handleCarouselChange(index)}
         >
           {data &&
             data.length > 0 &&
-            data.map(
-              (
-                item: { [x: string]: { content: any } },
-                index: string | number
-              ) => {
-                return (
-                  <div className="circular_container">
-                    <div className="info">{item.content}</div>
-                    <div className="rotating_container"></div>
-                  </div>
-                );
-              }
-            )}
+            data.map((item: AboutData, index: number) => {
+              return (
+                <div className="circular_container">
+                  {item.text && <div className="text">{item.text}</div>}
+                  {item.content &&
+                    item.content.length > 0 &&
+                    item.content.map((i: OrganisationDetails, j: number) => {
+                      return (
+                        <div className="info">
+                          <div>
+                            <img className="logo" src={i.logo} />
+                          </div>
+                          <div className="company">
+                            {i.company && (
+                              <div className="name">{i.company}</div>
+                            )}
+                            {i.role && <div className="role">{i.role}</div>}
+                            {i.span && <div className="span">[{i.span}]</div>}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  <div className="rotating_container"></div>
+                </div>
+              );
+            })}
         </Carousel>
       </div>
     </>
