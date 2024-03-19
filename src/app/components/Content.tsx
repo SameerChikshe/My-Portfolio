@@ -5,10 +5,15 @@ import NextArrow from "../../images/NextArrow.svg";
 import PreviousArrow from "../../images/PreviousArrow.svg";
 import "../styles/content.scss";
 import { useState } from "react";
-import { AboutData, OrganisationDetails, data } from "../data/about";
 
-const Content = () => {
-  const [activeTab, setActiveTab] = useState("Introduction");
+interface Props {
+  data: any;
+  heading: string;
+  className: string;
+}
+
+const Content = ({ data, heading, className }: Props) => {
+  const [activeTab, setActiveTab] = useState(data[0].section);
 
   const handleCarouselChange = (index: number) => {
     setActiveTab(data[index].section);
@@ -18,10 +23,10 @@ const Content = () => {
     <>
       <div className="page_container">
         <div className="category_container">
-          <div className="category heading">About.</div>
+          <div className="category heading">{heading}</div>
           {data &&
             data.length > 0 &&
-            data.map((item: AboutData, index: number) => {
+            data.map((item: any, index: number) => {
               return (
                 <div
                   key={index}
@@ -63,13 +68,15 @@ const Content = () => {
         >
           {data &&
             data.length > 0 &&
-            data.map((item: AboutData, index: number) => {
+            data.map((item: any, index: number) => {
               return (
-                <div className="circular_container">
+                <div
+                  className={`circular_container ${index !== 3 && className}`}
+                >
                   {item.text && <div className="text">{item.text}</div>}
                   {item.content &&
                     item.content.length > 0 &&
-                    item.content.map((i: OrganisationDetails, j: number) => {
+                    item.content.map((i: any, j: number) => {
                       return (
                         <div className="info">
                           <div>

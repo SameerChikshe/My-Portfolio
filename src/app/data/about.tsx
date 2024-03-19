@@ -11,7 +11,7 @@ export type OrganisationDetails = {
   span: string;
 };
 
-export const data: any = [
+export const about: AboutData = [
   {
     section: "Introduction",
     text: "Experienced UI/UX Designer passionate about creating intuitive and visually compelling digital experiences. Proficient in translating complex ideas into user-friendly interfaces, I specialize in crafting designs that seamlessly blend aesthetics with functionality. My skill set includes design thinking, wireframing, visual design, prototyping, and a strong proficiency in design tools",

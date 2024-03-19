@@ -77,6 +77,35 @@
         flex-direction: column;
         box-sizing: border-box;
 
+        .rotating_container {
+            width: 524px;
+            height: 524px;
+            border-left: 4px solid #92FF06;
+            position: absolute;
+            top: 0;
+            box-sizing: border-box;
+            border-radius: 50%;
+            animation: rotate 3s linear infinite;
+
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+
+            }
+
+            to {
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+    }
+
+    .about_container {
+
         .text {
             font-size: 16px;
             font-weight: 400;
@@ -119,53 +148,45 @@
                     color: darkgrey;
                 }
 
-                .dot {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1px;
-                }
-
-
             }
         }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 27px;
-
-
-
-        }
-
-        .rotating_container {
-            width: 524px;
-            height: 524px;
-            border-left: 4px solid #92FF06;
-            position: absolute;
-            top: 0;
-            box-sizing: border-box;
-            border-radius: 50%;
-            animation: rotate 3s linear infinite;
-
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-
-            }
-
-            to {
-                transform: rotate(360deg);
-
-            }
-
-        }
     }
 
+    .contact_container {
+
+        .text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+            max-width: 418px;
+        }
+
+
+        .info {
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+            display: flex;
+            gap: 10px;
+            max-width: 300px;
+
+            .company {
+                display: flex;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .name {
+                    color: dimgrey;
+                    font-weight: 600;
+                }
+
+                .span {
+                    color: darkgrey;
+                }
+
+            }
+        }
+    }
 }

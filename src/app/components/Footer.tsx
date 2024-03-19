@@ -1,7 +1,7 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import github from "../../images/github.png";
-import linkedin from "../../images/linkedIn.png";
+import linkedin from "../../images/linkedin.svg";
 import "../styles/footer.scss";
 const Footer = () => {
   const router = useRouter();
