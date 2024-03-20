@@ -71,12 +71,20 @@ export const about: AboutData = [
         role: "Next.js",
       },
       {
-        logo: "https://t3.ftcdn.net/jpg/03/21/24/30/360_F_321243084_GstfWflk1eTLlzUdRZ5mjoP5IG1iCc8J.jpg",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
         role: "JavaScript",
       },
       {
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+        logo: "https://cdn.worldvectorlogo.com/logos/typescript-2.svg",
         role: "TypeScript",
+      },
+      {
+        logo: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
+        role: "HTML",
+      },
+      {
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png",
+        role: "CSS",
       },
     ],
   },

@@ -5,7 +5,7 @@ import { about } from "../data/about";
 const AboutMe = () => {
   return (
     <div className="about_me">
-      <Content data={about} heading="About." className="about_container" />
+      <Content data={about} heading="About." classname="skills" />
     </div>
   );
 };
