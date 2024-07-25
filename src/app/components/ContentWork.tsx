@@ -12,7 +12,7 @@ interface Props {
   classname: string;
 }
 
-const Content = ({ data, heading, classname }: Props) => {
+const ContentWork = ({ data, heading, classname }: Props) => {
   const [activeTab, setActiveTab] = useState(data[0].section);
 
   const handleCarouselChange = (index: number) => {
@@ -103,4 +103,4 @@ const Content = ({ data, heading, classname }: Props) => {
   );
 };
 
-export default Content;
+export default ContentWork;

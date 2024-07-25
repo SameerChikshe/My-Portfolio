@@ -1,3 +1,5 @@
+import bvm from "../../images/BVM.jpeg"
+
 export type AboutData = {
   section: string;
   text: string;
@@ -33,7 +35,7 @@ export const about: AboutData = [
         span: "2016",
       },
       {
-        logo: "https://media.licdn.com/dms/image/C4E0BAQFfI9tTyCgIhA/company-logo_200_200/0/1630597744597/bal_vidya_mandir_parbhani_logo?e=2147483647&v=beta&t=BmB7WJl2XvgWMSIm4cnujpgHPfkQ5f60srMHvbyvBkM",
+        logo: bvm,
         company: "Bal Vidya Mandir, Parbhani",
         role: "SSC",
         span: "2014",
