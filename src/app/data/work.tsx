@@ -14,7 +14,7 @@ export type OrganisationDetails = {
   span: string;
 };
 
-export const work: WorkData = [
+export const work: any = [
   {
     section: "HealthKart",
     content: [

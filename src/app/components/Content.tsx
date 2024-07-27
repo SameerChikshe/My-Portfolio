@@ -70,14 +70,14 @@ const Content = ({ data, heading, classname }: Props) => {
             data.length > 0 &&
             data.map((item: any, index: number) => {
               return (
-                <div className="circular_container">
+                <div key={index} className="circular_container">
                   <div className={index === 3 ? "skills_content" : "content"}>
                     {item.text && <div className="text">{item.text}</div>}
                     {item.content &&
                       item.content.length > 0 &&
                       item.content.map((i: any, j: number) => {
                         return (
-                          <div className={index === 3 ? classname : "info"}>
+                          <div key={j} className={index === 3 ? classname : "info"}>
                             <div>
                               <img className="logo" src={i.logo.src} />
                               
