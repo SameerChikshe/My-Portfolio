@@ -1,3 +1,4 @@
+import Image from "next/image";
 import profile from "../../images/profile.jpg";
 import "../styles/homepage.scss";
 
@@ -10,7 +11,14 @@ const Homepage = () => {
         <div className="role">Front-end Developer</div>
       </div>
       <div className="image_container">
-        <img className="image" src={profile.src} />
+        <Image
+          className="image"
+          src={profile.src}
+          alt="profile_pic"
+          width={100}
+          height={100}
+          layout="responsive"
+        />
         <div className="rotating_container"></div>
       </div>
     </div>

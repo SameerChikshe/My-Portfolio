@@ -5,6 +5,7 @@ import NextArrow from "../../images/NextArrow.svg";
 import PreviousArrow from "../../images/PreviousArrow.svg";
 import "../styles/content.scss";
 import { useState } from "react";
+import Image from "next/image";
 
 interface Props {
   data: any;
@@ -42,21 +43,25 @@ const Content = ({ data, heading, classname }: Props) => {
         <Carousel
           renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
             hasPrev && (
-              <img
+              <Image
                 onClick={clickHandler}
                 className="previous"
                 src={PreviousArrow.src}
                 alt="Previous Slide"
+                width={68}
+                height={68}
               />
             )
           }
           renderArrowNext={(clickHandler, hasNext, labelPrev) =>
             hasNext && (
-              <img
+              <Image
                 onClick={clickHandler}
                 className="next"
                 src={NextArrow.src}
                 alt="Next Slide"
+                width={68}
+                height={68}
               />
             )
           }
@@ -77,10 +82,18 @@ const Content = ({ data, heading, classname }: Props) => {
                       item.content.length > 0 &&
                       item.content.map((i: any, j: number) => {
                         return (
-                          <div key={j} className={index === 3 ? classname : "info"}>
+                          <div
+                            key={j}
+                            className={index === 3 ? classname : "info"}
+                          >
                             <div className="logo_container">
-                              <img className="logo" src={i.logo.src} />
-                              
+                              <Image
+                                className="logo"
+                                src={i.logo.src}
+                                width={60}
+                                height={60}
+                                alt="logo"
+                              />
                             </div>
                             <div className="company">
                               {i.company && (

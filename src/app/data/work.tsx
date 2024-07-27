@@ -1,8 +1,7 @@
-import hk from "../../images/healthkart.png"
-import mb from "../../images/mb.png"
-import tb from "../../images/tb.png"
-import hkv from "../../images/hkv.png"
-
+import hk from "../../images/healthkart.png";
+import mb from "../../images/mb.png";
+import tb from "../../images/tb.png";
+import hkv from "../../images/hkv.png";
 
 export type WorkData = {
   section: string;
@@ -12,7 +11,7 @@ export type WorkData = {
 export type OrganisationDetails = {
   logo: any;
   company: string;
-  url:string
+  url: string;
 };
 
 export const work: WorkData[] = [
@@ -22,7 +21,7 @@ export const work: WorkData[] = [
       {
         logo: hk,
         company: "HealthKart",
-        url:"https://www.healthkart.com/"
+        url: "https://www.healthkart.com/",
       },
     ],
   },
@@ -33,7 +32,7 @@ export const work: WorkData[] = [
       {
         logo: mb,
         company: "MuscleBlaze",
-        url:"https://www.muscleblaze.com/"
+        url: "https://www.muscleblaze.com/",
       },
     ],
   },
@@ -65,8 +64,8 @@ export const work: WorkData[] = [
     content: [
       {
         logo: "",
-        company: "HealthKart",
-        url:""
+        company: "NPAV",
+        url: "",
       },
     ],
   },

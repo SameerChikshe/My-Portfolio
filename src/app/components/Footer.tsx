@@ -3,6 +3,7 @@ import { usePathname, useRouter } from "next/navigation";
 import github from "../../images/github.png";
 import linkedin from "../../images/linkedin.svg";
 import "../styles/footer.scss";
+import Image from "next/image";
 const Footer = () => {
   const router = useRouter();
 
@@ -50,15 +51,24 @@ const Footer = () => {
           href="https://www.linkedin.com/in/sameer-chikshe-913127178/"
           target="_blank"
         >
-          <img
+          <Image
             className="logo"
             src={linkedin.src}
             alt="linkedIn"
             title="linkedIn"
+            width={20}
+            height={20}
           />
         </a>
         <a href="https://github.com/SameerChikshe" target="_blank">
-          <img className="logo" src={github.src} alt="github" title="github" />
+          <Image
+            className="logo"
+            src={github.src}
+            alt="github"
+            title="github"
+            width={20}
+            height={20}
+          />
         </a>
       </div>
     </div>

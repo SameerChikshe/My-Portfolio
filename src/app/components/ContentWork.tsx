@@ -5,6 +5,7 @@ import NextArrow from "../../images/NextArrow.svg";
 import PreviousArrow from "../../images/PreviousArrow.svg";
 import "../styles/content.scss";
 import { useState } from "react";
+import Image from "next/image";
 
 interface Props {
   data: any;
@@ -42,21 +43,25 @@ const ContentWork = ({ data, heading }: Props) => {
         <Carousel
           renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
             hasPrev && (
-              <img
+              <Image
                 onClick={clickHandler}
                 className="previous"
                 src={PreviousArrow.src}
                 alt="Previous Slide"
+                width={68}
+                height={68}
               />
             )
           }
           renderArrowNext={(clickHandler, hasNext, labelPrev) =>
             hasNext && (
-              <img
+              <Image
                 onClick={clickHandler}
                 className="next"
                 src={NextArrow.src}
                 alt="Next Slide"
+                width={68}
+                height={68}
               />
             )
           }
@@ -71,13 +76,27 @@ const ContentWork = ({ data, heading }: Props) => {
             data.map((item: any, index: number) => {
               return (
                 <div key={index} className="circular_container">
-                    {item.content &&
-                      item.content.length > 0 &&
-                      item.content.map((i: any, j: number) => {
-                        return (
-                            <a className="project_image_container" key={j} href={i.url} target="_blank"><img className="project_image" src={i.logo.src} /></a>
-                        );
-                      })}
+                  {item.content &&
+                    item.content.length > 0 &&
+                    item.content.map((i: any, j: number) => {
+                      return (
+                        <a
+                          className="project_image_container"
+                          key={j}
+                          href={i.url}
+                          target="_blank"
+                        >
+                          <Image
+                            className="project_image"
+                            src={i.logo.src}
+                            alt={i.company}
+                            width={100}
+                            height={100}
+                            layout="responsive"
+                          />
+                        </a>
+                      );
+                    })}
                   <div className="rotating_container"></div>
                 </div>
               );

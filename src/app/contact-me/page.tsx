@@ -5,6 +5,7 @@ import linkedin from "../../images/linkedin.svg";
 import phone from "../../images/phone.svg";
 import mail from "../../images/mail.svg";
 import line from "../../images/line.svg";
+import Image from "next/image";
 
 const ContactMe = () => {
   return (
@@ -17,24 +18,48 @@ const ContactMe = () => {
       <div className="circular_container">
         <div className="types">
           <div className="logo">
-            <img src={phone.src} alt="phone" title="phone" />
+            <Image
+              src={phone.src}
+              alt="phone"
+              title="phone"
+              width={28}
+              height={28}
+            />
           </div>
           <div className="content">+91 7020346056</div>
         </div>
 
         <div>
-          <img src={line.src} alt="line" title="line" />
+          <Image
+            src={line.src}
+            alt="line"
+            title="line"
+            width={28}
+            height={28}
+          />
         </div>
 
         <div className="types">
           <div className="logo">
-            <img src={mail.src} alt="mail" title="mail" />
+            <Image
+              src={mail.src}
+              alt="mail"
+              title="mail"
+              width={28}
+              height={28}
+            />
           </div>
           <div className="content">sameerchikshe.1@gmail.com</div>
         </div>
 
         <div>
-          <img src={line.src} />
+          <Image
+            src={line.src}
+            alt="line"
+            title="line"
+            width={28}
+            height={28}
+          />
         </div>
 
         <a
@@ -43,13 +68,25 @@ const ContactMe = () => {
           target="_blank"
         >
           <div className="logo">
-            <img src={linkedin.src} alt="linkedin" title="linkedin" />
+            <Image
+              src={linkedin.src}
+              alt="linkedin"
+              title="linkedin"
+              width={28}
+              height={28}
+            />
           </div>
           <div className="content">linkedin.com/in/sameer-chikshe</div>
         </a>
 
         <div className="line">
-          <img src={line.src} />
+          <Image
+            src={line.src}
+            alt="line"
+            title="line"
+            width={28}
+            height={28}
+          />
         </div>
 
         <a
@@ -58,7 +95,13 @@ const ContactMe = () => {
           target="_blank"
         >
           <div className="logo">
-            <img src={github.src} alt="github" title="github" />
+            <Image
+              src={github.src}
+              alt="github"
+              title="github"
+              width={28}
+              height={28}
+            />
           </div>
           <div className="content">github.com/SameerChikshe</div>
         </a>
