@@ -1,28 +1,28 @@
-import hk from "../../images/hk.jpg"
+import hk from "../../images/healthkart.png"
+import mb from "../../images/mb.png"
+import tb from "../../images/tb.png"
+import hkv from "../../images/hkv.png"
 
 
 export type WorkData = {
   section: string;
-  text: string;
   content: OrganisationDetails[];
 };
 
 export type OrganisationDetails = {
-  logo: string;
+  logo: any;
   company: string;
-  role: string;
-  span: string;
+  url:string
 };
 
-export const work: any = [
+export const work: WorkData[] = [
   {
     section: "HealthKart",
     content: [
       {
         logo: hk,
         company: "HealthKart",
-        role: "B.Tech",
-        span: "2016 - 2020",
+        url:"https://www.healthkart.com/"
       },
     ],
   },
@@ -31,10 +31,9 @@ export const work: any = [
     section: "MuscleBlaze",
     content: [
       {
-        logo: "https://assets-global.website-files.com/61b9a0d531bc5ea62566a3be/6229abe07c899183f607f51e_5.png",
-        company: "HealthKart",
-        role: "B.Tech",
-        span: "2016 - 2020",
+        logo: mb,
+        company: "MuscleBlaze",
+        url:"https://www.muscleblaze.com/"
       },
     ],
   },
@@ -43,10 +42,9 @@ export const work: any = [
     section: "TrueBasics",
     content: [
       {
-        logo: "https://www.truebasics.com/",
-        company: "HealthKart",
-        role: "B.Tech",
-        span: "2016 - 2020",
+        logo: tb,
+        company: "TrueBasics",
+        url: "https://www.truebasics.com/",
       },
     ],
   },
@@ -55,10 +53,9 @@ export const work: any = [
     section: "HKVitals",
     content: [
       {
-        logo: "https://www.hkvitals.com/",
-        company: "HealthKart",
-        role: "B.Tech",
-        span: "2016 - 2020",
+        logo: hkv,
+        company: "HKVitals",
+        url: "https://www.hkvitals.com/",
       },
     ],
   },
@@ -69,8 +66,7 @@ export const work: any = [
       {
         logo: "",
         company: "HealthKart",
-        role: "B.Tech",
-        span: "2016 - 2020",
+        url:""
       },
     ],
   },

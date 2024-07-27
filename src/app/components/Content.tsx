@@ -78,7 +78,7 @@ const Content = ({ data, heading, classname }: Props) => {
                       item.content.map((i: any, j: number) => {
                         return (
                           <div key={j} className={index === 3 ? classname : "info"}>
-                            <div>
+                            <div className="logo_container">
                               <img className="logo" src={i.logo.src} />
                               
                             </div>

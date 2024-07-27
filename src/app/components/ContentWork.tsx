@@ -12,7 +12,7 @@ interface Props {
   classname: string;
 }
 
-const ContentWork = ({ data, heading, classname }: Props) => {
+const ContentWork = ({ data, heading }: Props) => {
   const [activeTab, setActiveTab] = useState(data[0].section);
 
   const handleCarouselChange = (index: number) => {
@@ -71,28 +71,13 @@ const ContentWork = ({ data, heading, classname }: Props) => {
             data.map((item: any, index: number) => {
               return (
                 <div key={index} className="circular_container">
-                  <div className={index === 3 ? "skills_content" : "content"}>
-                    {item.text && <div className="text">{item.text}</div>}
                     {item.content &&
                       item.content.length > 0 &&
                       item.content.map((i: any, j: number) => {
                         return (
-                          <div key={j} className={index === 3 ? classname : "info"}>
-                            <div>
-                              <img className="logo" src={i.logo.src} />
-                              
-                            </div>
-                            <div className="company">
-                              {i.company && (
-                                <div className="name">{i.company}</div>
-                              )}
-                              {i.role && <div className="role">{i.role}</div>}
-                              {i.span && <div className="span">[{i.span}]</div>}
-                            </div>
-                          </div>
+                            <a className="project_image_container" key={j} href={i.url} target="_blank"><img className="project_image" src={i.logo.src} /></a>
                         );
                       })}
-                  </div>
                   <div className="rotating_container"></div>
                 </div>
               );
